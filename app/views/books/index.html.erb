@@ -1,0 +1,24 @@
+<h2>Books</h2>
+<div class = "main-content">
+  <div class = "content-category">
+    <h4>title</h4>
+    <h4>body</h4>
+  </div>
+  <div class = "main">
+    <% @books.each do |book| %>
+      <div class = "content">
+        <div class = "content-title">
+          <%= book.title %>
+        </div>
+        <div class = "content-body">
+          <%= book.body %>
+        </div>
+        <div class = "content-do">
+          <%= link_to 'Show', books_path(@book) %>
+          <%= link_to 'Edit', edit_book_path(@books) %>
+          <%= link_to 'Destroy', books_path(@book), method: :delete %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
