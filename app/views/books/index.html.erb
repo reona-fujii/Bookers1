@@ -1,8 +1,8 @@
 <h2>Books</h2>
 <div class = "main-content">
   <div class = "content-category">
-    <h4>title</h4>
-    <h4>body</h4>
+    <h4>Title</h4>
+    <h4>Body</h4>
   </div>
   <div class = "main">
     <% @books.each do |book| %>
@@ -24,10 +24,19 @@
 </div>
 
 <h2>New book</h2>
-<%= form_with model:@book, local:true do |f| %>
-<h4>Title</h4>
-<%= f.text_field :title %>
-<h4>Body</h4>
-<%= f.text_area :body %>
-<%= f.submit 'Create Book' %>
+<% if flash[:notice] %>
+  <div class = "flash">
+    <%= flash[:notice] %>
+  </div>
 <% end %>
+<div class = "create-form">
+  <%= form_with model:@book, local:true do |f| %>
+    <h4>Title</h4>
+    <%= f.text_field :title %>
+    <h4>Body</h4>
+    <%= f.text_area :body %>
+    <div class = "submit">
+      <%= f.submit 'Create Book' %>
+    </div>
+  <% end %>
+</div>

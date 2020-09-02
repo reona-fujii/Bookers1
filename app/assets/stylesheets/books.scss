@@ -1,15 +1,44 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h2 {
+  margin-left: 50px;
+}
+
 .content-category {
   display:flex;
-  padding-right:50px;
+}
+.content-category h4 {
+  width: 200px;
+  margin-left: 50px;
 }
 
+.content-title {
+  width: 150px;
+  margin-left: 50px;
+}
+
+.content-body {
+  width: 300px;
+  margin-left: 50px;
+}
+.content-do {
+  margin-left: 50px;
+}
 .content {
-  display:flex;
+  display: flex;
 }
-
+.create-form {
+  margin-left: 50px;
+}
+.submit {
+  display: block;
+  margin-top: 10px;
+}
 .show-content {
+  padding: 20px 0 0 30px;
+}
+.show-flash {
+  color: #3cb371;
   padding: 20px 0 0 30px;
 }
