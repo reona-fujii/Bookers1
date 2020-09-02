@@ -7,5 +7,8 @@
   <h5>Title: <%= @book.title %></h5>
   <h5>Body: <%= @book.body %></h5>
 </div>
+<div class ="botan">
   <%= link_to 'Edit', edit_book_path(@book) %>
+  <h5>|</h5>
   <%= link_to 'Back', books_path %>
+</div>
