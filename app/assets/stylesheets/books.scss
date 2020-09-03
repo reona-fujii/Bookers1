@@ -5,12 +5,19 @@ h2 {
   margin-left: 50px;
 }
 
+.top-main {
+  margin-left: 100px;
+}
+.top-main p {
+  padding-bottom: 30px;
+}
+
 .content-category {
   display:flex;
 }
-.content-category h4 {
+.content-category p {
   width: 200px;
-  margin-left: 50px;
+  margin-left: 60px;
 }
 
 .content-title {
@@ -31,6 +38,10 @@ h2 {
 .create-form {
   margin-left: 50px;
 }
+.create-form p {
+  margin: 0 auto;
+}
+
 .submit {
   display: block;
   margin-top: 10px;
@@ -54,4 +65,24 @@ h2 {
 }
 .botan h5 {
   margin:0 5px;
+}
+
+.alert {
+  background-color: #dcdcdc;
+  width: 500px;
+  border: 2px solid #ff0000;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.alert h4 {
+  background-color: #ff0000;
+  width: 500px;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.alert ul {
+  margin-left: 100px;
 }

@@ -1,9 +1,15 @@
 <h2>Editing Book</h2>
- <% @book.errors.full_messages.each do |message| %>
-  <div class = "form-error">
-     <%= message %>
+ <% if @book.errors.any? %>
+  <div id = "error_explanation" class="alert alert-danger">
+    <h2><%= pluralize(@book.errors.count, "error") %>　prohibited this product from being saved:</h2>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
   </div>
-  <% end %>
+<% end %>
+
 <div class = "edit-main">
   <%= form_with model:@book , local:true do |f| %>
     <h5>Title</h5>
