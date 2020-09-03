@@ -36,10 +36,14 @@
 <% end %>
 <div class = "create-form">
   <%= form_with model:@book, local:true do |f| %>
-    <p><strong>Title</strong></p>
-    <%= f.text_field :title %>
-    <p><strong>Body</storng></p>
-    <%= f.text_area :body %>
+    <div class = "field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class = "field">
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+    </div>
     <div class = "submit">
       <%= f.submit 'Create Book' %>
     </div>

@@ -1,7 +1,7 @@
 <h2>Editing Book</h2>
  <% if @book.errors.any? %>
-  <div id = "error_explanation" class="alert alert-danger">
-    <h2><%= pluralize(@book.errors.count, "error") %>　prohibited this product from being saved:</h2>
+  <div id = "error_explanation" class="alert">
+    <h4><%= pluralize(@book.errors.count, "error") %>　prohibited this product from being saved:</h4>
     <ul>
       <% @book.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,17 +12,21 @@
 
 <div class = "edit-main">
   <%= form_with model:@book , local:true do |f| %>
-    <h5>Title</h5>
-    <%= f.text_field :title %>
-    <h5>Body</h5>
-    <%= f.text_area :body %>
+    <div class = "field">    
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class = "field">
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+    </div>
     <div class = "submit">
       <%= f.submit 'Update Book' %>
     </div>
   <% end %>
   <div class = "botan">
     <%= link_to 'Show', book_path(@book) %>
-    <h5>|</h5>
+    <h4>|</h4>
     <%= link_to 'Back', books_path %>
   </div>
 </div>
