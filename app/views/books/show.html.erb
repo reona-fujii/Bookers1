@@ -1,6 +1,14 @@
+<% if flash[:notice] %>
+  <div class = "show-flash" >
+    <%= flash[:notice] %>
+  </div>
+<% end %>
 <div class = "show-content" >
   <h5>Title: <%= @book.title %></h5>
   <h5>Body: <%= @book.body %></h5>
 </div>
+<div class ="botan">
   <%= link_to 'Edit', edit_book_path(@book) %>
+  <h4>|</h5>
   <%= link_to 'Back', books_path %>
+</div>
