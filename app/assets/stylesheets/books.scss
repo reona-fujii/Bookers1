@@ -1,6 +1,8 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//top
 h2 {
   margin-left: 50px;
 }
@@ -10,6 +12,11 @@ h2 {
 }
 .top-main p {
   padding-bottom: 30px;
+}
+
+//index
+table {
+  display: table;
 }
 
 .content-category {
@@ -44,6 +51,8 @@ h2 {
   display: block;
   margin-top: 10px;
 }
+
+//show, edit
 .show-content {
   padding: 20px 0 0 30px;
 }
